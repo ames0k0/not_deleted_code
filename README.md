@@ -1,4 +1,4 @@
-# Coding Challanges
+### Coding Challanges
 #### Programming Languages
 - [ ] C++
 - [x] Python
