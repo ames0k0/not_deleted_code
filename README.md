@@ -19,3 +19,12 @@
 ```console
 export PYTHONPATH=$PYTHONPATH:`pwd`
 ```
+
+## Random Projects
+DataStructures, Algorithms, Subprocess, Datetime, Social Media API
+- [ ] [Website Content With Socket](./RandomProjects/get_website_content_with_socket.py)
+- [ ] [Max String Without Check](./RandomProjects/max_string_by_alpha_without_check.py)
+- [x] random
+- [x] datetime
+- [x] subprocess
+- [x] prettytable
