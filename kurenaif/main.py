@@ -35,30 +35,23 @@ def main(seq: str, target: str, K: int):
     print('\n')
 
     for t in target:
-        left_half = list(reversed(seq[:K]))
-        right_half = seq[K:]
+        t_idx = find(seq, t)
 
-        t_pos = find(left_half, t)
-        t_pos_r = find(right_half, t)
+        if t_idx == -1:
+            continue
 
-        if t_pos == t_pos_r:
-            raise NotImplementedError(f"[{t}] is Not in the `seq`")
+        diff = K - t_idx
+        res.append(abs(diff))
 
-        if t_pos != -1:
-            t_pos += 1
-            res.append(t_pos)
-            for _ in range(t_pos):
+        if t_idx < K:
+            for _ in range(diff):
                 seq.insert(0, seq.pop())
         else:
-            res.append(t_pos_r)
-            for _ in range(t_pos_r):
+            for _ in range(abs(diff)):
                 seq.append(seq.pop(0))
 
-        if seq[K] != t:
-            raise ValueError(f"{seq[K]} != {t}")
-
-
         seq_p(t)
+        continue
 
     print(' '.join([str(r) for r in res]))
 
