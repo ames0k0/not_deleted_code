@@ -51,7 +51,7 @@ while do_calc:
             # skip
             reposition += greather
 
-            # new position for target: a|b :: input[*greather] = target || 
+            # new position for target: a|b :: input[*greather] = target ||
             positions[tindex] = greather
 
         except IndexError:
